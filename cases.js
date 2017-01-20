@@ -1,34 +1,34 @@
 
 cases = [
     {
+        "desc": "登录成功",
+        "httpStatus": 200,
         "jsonContent": {
             "agentName": "北京"
         },
-        "httpStatus": 200,
-        "path": "result",
-        "method": "POST",
         "jsonStatus": 200,
-        "desc": "登录成功"
+        "method": "POST",
+        "path": "result"
     },
     {
+        "desc": "登录密码错误",
+        "httpStatus": 200,
         "jsonContent": {
             "result": null
         },
-        "httpStatus": 200,
-        "path": "result",
-        "method": "POST",
         "jsonStatus": 4511,
-        "desc": "登录密码错误"
+        "method": "POST",
+        "path": "result"
     },
     {
+        "desc": "登录-参数校验失败",
+        "httpStatus": 200,
         "jsonContent": {
             "result": null
         },
-        "httpStatus": 200,
-        "path": "result",
-        "method": "POST",
         "jsonStatus": 4514,
-        "desc": "登录-参数校验失败"
+        "method": "POST",
+        "path": "result"
     }
 ];
 
