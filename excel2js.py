@@ -7,15 +7,15 @@ import json
 import ast
 
 import xlrd
- 
 
-def convert(input, output):
-    bk = xlrd.open_workbook(input)
-    shxrange = range(bk.nsheets)
+
+def convert(excel, js):
+    bk = xlrd.open_workbook(excel)
+    # shxrange = range(bk.nsheets)
     try:
         sh = bk.sheet_by_name("Sheet1")
     except:
-        print "no sheet in %s named Sheet1" % fname
+        print "no sheet in %s named Sheet1" % (excel)
 
 #获取行数
     nrows = sh.nrows
@@ -44,14 +44,14 @@ def convert(input, output):
             case[cell_key] = cell_val
         cases.append(case)
 
-    with open(output, "w") as file:
-        file.write("\n")
-        file.write("cases = ")
+    with open(js, "w") as f:
+        f.write("\n")
+        f.write("cases = ")
         dump = json.dumps(cases, indent=4, separators=(',', ': '), ensure_ascii=False)
-        file.write(dump)
-        file.write(";")
-        file.write("\n\n")
-        file.write("module.exports = cases;")
+        f.write(dump)
+        f.write(";")
+        f.write("\n\n")
+        f.write("module.exports = cases;")
 
 
 def main():
