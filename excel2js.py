@@ -47,7 +47,7 @@ def convert(excel, js):
     with open(js, "w") as f:
         f.write("\n")
         f.write("cases = ")
-        dump = json.dumps(cases, indent=4, separators=(',', ': '), ensure_ascii=False)
+        dump = json.dumps(cases, indent=4, separators=(',', ': '), ensure_ascii=False, sort_keys=True)
         f.write(dump)
         f.write(";")
         f.write("\n\n")
