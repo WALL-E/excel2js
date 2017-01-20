@@ -7,6 +7,8 @@
 *注意:* json中null值，在Python中使用None表示
 
 ## 依赖
+Library for developers to extract data from Microsoft Excel (tm) spreadsheet files
+
 ```shell
 pip install xlrd
 ```
