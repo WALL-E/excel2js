@@ -4,6 +4,8 @@
 ## excel内容格式
 必须符合Python的基本语法，字符串可以不写引号
 
+*注意:* json中null值，在Python中使用None表示
+
 ## 依赖
 ```shell
 pip install xlrd
